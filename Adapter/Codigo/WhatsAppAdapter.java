@@ -1,14 +1,12 @@
 public class WhatsAppAdapter implements Notificacion {
-    private WhatsApp whatsapp;
-    private Informe informe;
+    private WhatsApp adaptee;
 
-    public WhatsAppAdapter(Informe informe) {
-        this.informe = informe;
-        this.whatsapp = new WhatsApp();
+    public WhatsAppAdapter(WhatsApp whatsApp) {
+        this.adaptee = whatsApp;
     }
 
     @Override
     public void enviarNotificacion() {
-        whatsapp.enviarNotificacion();
+        adaptee.enviarNotificacion();
     }
 }
