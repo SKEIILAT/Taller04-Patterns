@@ -1,14 +1,14 @@
 public class CorreoAdapter implements Notificacion {
-    private Correo correo;
+    private Correo adaptee;
     private Informe informe;
 
-    public CorreoAdapter(Informe informe) {
+    public CorreoAdapter(Informe informe, Correo correo) {
         this.informe = informe;
-        this.correo = new Correo();
+        this.adaptee = correo;
     }
 
     @Override
     public void enviarNotificacion() {
-        correo.enviarNotificacion();
+        adaptee.enviarNotificacion();
     }
 }
