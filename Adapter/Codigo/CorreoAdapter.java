@@ -1,9 +1,7 @@
 public class CorreoAdapter implements Notificacion {
     private Correo adaptee;
-    private Informe informe;
 
-    public CorreoAdapter(Informe informe, Correo correo) {
-        this.informe = informe;
+    public CorreoAdapter( Correo correo) {
         this.adaptee = correo;
     }
 
