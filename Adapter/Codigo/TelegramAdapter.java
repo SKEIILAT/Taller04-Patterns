@@ -1,14 +1,12 @@
 public class TelegramAdapter implements Notificacion {
-    private Telegram telegram;
-    private Informe informe;
+    private Telegram adaptee;
 
-    public TelegramAdapter(Informe informe) {
-        this.informe = informe;
-        this.telegram = new Telegram();
+    public TelegramAdapter(Telegram telegram) {
+        this.adaptee = telegram;
     }
 
     @Override
     public void enviarNotificacion() {
-        telegram.enviarNotificacion();
+        adaptee.enviarNotificacion();
     }
 }
